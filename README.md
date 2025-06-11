@@ -1,114 +1,112 @@
-# Cost-Effectiveness of Type 1 Diabetes Interventions in Resource-Limited Settings
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Cost-Effectiveness Analysis of Type 1 Diabetes Interventions in Resource-Limited Settings
 
 ## Overview
 
-This repository contains the complete analysis code, data, and manuscript for a comprehensive cost-effectiveness evaluation of Type 1 diabetes interventions in resource-limited settings. The study uses patient-level discrete-time microsimulation to compare 19 individual interventions organized into 4 clusters, providing evidence-based guidance for health system decision makers.
+This repository contains the complete microsimulation model and analysis code for evaluating the cost-effectiveness of Type 1 diabetes interventions in resource-limited settings. The analysis follows WHO CHOICE methodology and CHEERS 2022 guidelines.
 
-## Repository Contents
+## Study Design
 
-### Core Files
-- `analysis.R` - Complete R microsimulation code with full risk equations
+**Objective:** To evaluate the cost-effectiveness of individual Type 1 diabetes interventions and intervention clusters in resource-limited settings through microsimulation modeling with expert validation.
 
-### Documentation
-- `CHEERS_checklist.md` - CHEERS 2022 compliance checklist
-- `LICENSE` - MIT License for open source sharing
+**Methods:** Patient-level discrete-time microsimulation model with 10-year time horizon, health system perspective, and probabilistic sensitivity analysis.
 
-## Methodology
+**Interventions Evaluated:**
 
-### Microsimulation Model
-- **Patient-level discrete-time simulation** 
-- **Validated risk equations** from DCCT/EDIC, Finnish Diabetes Register, Swedish Inpatient Register
-- **Complete complication modeling** (CVD, ESRD, PDR, LEA, mortality)
-- **Realistic correlation structure** between costs and effectiveness
+### Individual Interventions:
+1. **DSMES** - Diabetes Self-Management Education & Support
+2. **CGM** - Continuous Glucose Monitoring  
+3. **SMBG** - Self-Monitoring of Blood Glucose
+4. **Task-Shifting** - Training non-physician healthcare providers
+5. **mHealth** - Mobile Health Technologies
 
-### Expert Validation
-- **Two-round Delphi process** with 15 international experts
-- **Consensus achieved** on all intervention clusters and effectiveness estimates
+### Intervention Clusters:
+1. **Integrated Care Delivery Models** - DSMES + Task-Shifting
+2. **Public-Private Partnership Models** - DSMES + mHealth + Task-Shifting  
+3. **Technology-Enhanced Self-Management** - CGM + mHealth + DSMES + SMBG
 
-### Economic Evaluation
-- **Health system perspective** with 3% annual discount rate
-- **Costs as % GDP per capita** following WHO guidelines
-- **CHEERS 2022 compliant** reporting
-- **Monte Carlo uncertainty analysis** with 95% confidence intervals
+## Repository Structure
+
+```
+├── src/                          # Source code
+│   ├── model/                    # Microsimulation model
+│   ├── analysis/                 # Analysis scripts
+│   ├── utils/                    # Utility functions
+│   └── visualization/            # Plotting and visualization
+├── data/                         # Input data and parameters
+├── results/                      # Model outputs and results
+├── docs/                         # Documentation
+├── tests/                        # Unit tests
+├── requirements.txt              # Python dependencies
+└── README.md                     # This file
+```
+
+## Key Features
+
+- **Patient-level microsimulation** with individual heterogeneity
+- **WHO CHOICE cost methodology** with international dollar standardization
+- **Probabilistic sensitivity analysis** with 10,000 Monte Carlo iterations
+- **Expert-validated parameters** through two-round Delphi process
+- **Comprehensive intervention clustering** based on systematic review evidence
+- **Resource-limited setting focus** with appropriate adaptations
+
+## Model Specifications
+
+- **Population:** Type 1 diabetes patients aged 10-65 years in LMICs
+- **Time horizon:** 10 years with monthly cycles
+- **Perspective:** Health system (WHO CHOICE methodology)
+- **Discount rate:** 3% annually for costs and outcomes
+- **Outcomes:** DALYs averted, QALYs gained, cost per outcome
+- **Currency:** 2025 International Dollars and % GDP per capita
 
 ## Installation and Usage
 
-### Requirements
-```r
-# R version 4.0 or higher
-install.packages(c("dplyr", "ggplot2", "survival", "MASS", "readr"))
-```
+```bash
+# Clone repository
+git clone https://github.com/sanjaybasu/t1dm-cea.git
+cd t1dm-cea
 
-### Running the Analysis
-```r
-# Load and run the complete microsimulation
-source("analysis.R")
+# Install dependencies
+pip install -r requirements.txt
 
-# Results will be saved to:
-# - individual_results.csv
-# - cluster_results.csv
-# - Generated figures (PNG format)
-```
+# Run base case analysis
+python src/analysis/base_case_analysis.py
 
-### Customization Options
-The analysis can be customized by modifying parameters in `analysis.R`:
-- **Population size:** Change `n_patients` (default: 10,000)
-- **Policy horizon:** Modify `time_horizon` (default: 10 years)
-- **Discount rate:** Adjust `discount_rate` (default: 3%)
-- **Intervention effects:** Update HbA1c reduction values
+# Run sensitivity analysis
+python src/analysis/sensitivity_analysis.py
 
-
-## Citation
-
-If you use this code or data in your research, please cite:
-
-```
-Basu S, Zafra J, Beran D. Cost-Effectiveness of Type 1 Diabetes Interventions 
-in Resource-Limited Settings: A Microsimulation Analysis. Github. 2025.
+# Generate results summary
+python src/analysis/results_summary.py
 ```
 
 ## Authors
 
-- **Sanjay Basu, MD, PhD** (Corresponding author)
-  - University of California / San Francisco General Hospital
-  - Waymark Care, San Francisco, CA
-  - Email: sanjay.basu@ucsf.edu
+**Sanjay Basu, MD, PhD**  
+University of California San Francisco / San Francisco General Hospital  
+Waymark Care  
 
-- **Jessica Zafra, MSc**
-  - Division of Tropical and Humanitarian Medicine, University of Geneva
+**Jessica Hanae Zafra-Tanaka, MSc, PhD**  
+University of Geneva and Geneva University Hospitals  
 
-- **David Beran, PhD**
-  - Division of Tropical and Humanitarian Medicine, University of Geneva
+**David Beran, PhD**  
+University of Geneva and Geneva University Hospitals  
 
-## Funding
+## Citation
 
-This work was supported by Breakthrough T1DM.
+If you use this code or methodology, please cite:
+
+Basu S, Zafra-Tanaka JH, Beran D. Cost-Effectiveness of Type 1 Diabetes Interventions in Resource-Limited Settings: A Systematic Review and Economic Evaluation with Delphi Expert Validation. *Lancet Diabetes Endocrinol*. 2025.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details.
 
-## Contributing
+## Funding
 
-We welcome contributions to improve the analysis or extend it to other settings. Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add improvement'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
+This work was supported by Breakthrough T1D. The funder had no role in study design, data collection, analysis, interpretation, or manuscript preparation.
 
 ## Contact
 
-For questions about the methodology or implementation, please contact:
-- Sanjay Basu: sanjay.basu@ucsf.edu
-- Repository issues: Use GitHub Issues for technical questions
-
-## Acknowledgments
-
-- International experts who participated in the Delphi validation process
-- DCCT/EDIC, Finnish Diabetes Register, and Swedish Inpatient Register for risk equation data
-- Breakthrough T1DM for funding support
+For questions about the model or analysis:
+- Email: sanjay.basu@ucsf.edu
+- GitHub: https://github.com/sanjaybasu/t1dm-cea
 
