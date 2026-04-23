@@ -1,0 +1,58 @@
+SENSITIVITY ANALYSIS SUMMARY
+========================================
+
+INTERVENTION: DSMES
+------------------------------
+Most sensitive parameter: cost_multiplier
+ICER range: $23,218
+Best case scenario: Optimistic
+  ICER: $23,813/QALY
+Worst case scenario: Pessimistic
+  ICER: $77,392/QALY
+PSA mean ICER: $38,696/QALY
+95% CI: $38,696 - $38,696
+Prob. cost-effective at $4,000/QALY: 0.0%
+Prob. cost-effective at $12,000/QALY: 0.0%
+Prob. cost-effective at $50,000/QALY: 100.0%
+
+INTERVENTION: Task_Shifting
+------------------------------
+Most sensitive parameter: cost_multiplier
+ICER range: $12,898
+Best case scenario: Optimistic
+  ICER: $13,229/QALY
+Worst case scenario: Pessimistic
+  ICER: $42,994/QALY
+PSA mean ICER: $21,497/QALY
+95% CI: $21,497 - $21,497
+Prob. cost-effective at $4,000/QALY: 0.0%
+Prob. cost-effective at $12,000/QALY: 0.0%
+Prob. cost-effective at $50,000/QALY: 100.0%
+
+INTERVENTION: Integrated_Care
+------------------------------
+Most sensitive parameter: cost_multiplier
+ICER range: $36,014
+Best case scenario: Optimistic
+  ICER: $36,937/QALY
+Worst case scenario: Pessimistic
+  ICER: $120,046/QALY
+PSA mean ICER: $60,023/QALY
+95% CI: $60,023 - $60,023
+Prob. cost-effective at $4,000/QALY: 0.0%
+Prob. cost-effective at $12,000/QALY: 0.0%
+Prob. cost-effective at $50,000/QALY: 0.0%
+
+INTERVENTION: Public_Private
+------------------------------
+Most sensitive parameter: cost_multiplier
+ICER range: $36,374
+Best case scenario: Optimistic
+  ICER: $37,307/QALY
+Worst case scenario: Pessimistic
+  ICER: $121,247/QALY
+PSA mean ICER: $60,624/QALY
+95% CI: $60,624 - $60,624
+Prob. cost-effective at $4,000/QALY: 0.0%
+Prob. cost-effective at $12,000/QALY: 0.0%
+Prob. cost-effective at $50,000/QALY: 0.0%

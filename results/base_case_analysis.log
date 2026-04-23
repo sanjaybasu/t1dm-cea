@@ -1,0 +1,21 @@
+2026-04-23 10:08:54,623 - INFO - Starting base case cost-effectiveness analysis
+2026-04-23 10:08:54,623 - INFO - Analysis parameters:
+2026-04-23 10:08:54,623 - INFO -   - Time horizon: 10 years
+2026-04-23 10:08:54,624 - INFO -   - Discount rate: 3.0%
+2026-04-23 10:08:54,624 - INFO -   - Perspective: Health system (WHO CHOICE)
+2026-04-23 10:08:54,624 - INFO -   - Currency: 2025 International Dollars
+2026-04-23 10:08:54,624 - INFO - Simulating 1000 patients per intervention
+2026-04-23 10:08:54,624 - INFO - Simulating baseline scenario...
+2026-04-23 10:08:55,825 - INFO - Simulating intervention: DSMES
+2026-04-23 10:08:57,126 - INFO - Simulating intervention: CGM
+2026-04-23 10:08:58,443 - INFO - Simulating intervention: SMBG
+2026-04-23 10:08:59,874 - INFO - Simulating intervention: Task_Shifting
+2026-04-23 10:09:01,180 - INFO - Simulating intervention: mHealth
+2026-04-23 10:09:02,594 - INFO - Simulating intervention: Integrated_Care
+2026-04-23 10:09:03,975 - INFO - Simulating intervention: Public_Private
+2026-04-23 10:09:05,390 - INFO - Simulating intervention: Technology_Enhanced
+2026-04-23 10:09:06,882 - INFO - Cost-effectiveness summary saved to base_case_cost_effectiveness_summary.csv
+2026-04-23 10:09:06,963 - INFO - Detailed results exported to results/base_case_patient_level_results.csv
+2026-04-23 10:09:06,965 - INFO - Generating visualizations...
+2026-04-23 10:09:07,737 - INFO - Base case analysis completed successfully
+2026-04-23 10:09:07,737 - INFO - Results saved to results/ directory

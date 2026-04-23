@@ -91,10 +91,10 @@ INDIVIDUAL_INTERVENTIONS = {
     
     'mHealth': InterventionParameters(
         name='Mobile Health Technologies',
-        hba1c_reduction_mean=0.36,   # Mean of 0.16-0.56% range
-        hba1c_reduction_std=0.133,   # SD to capture range
-        hba1c_reduction_min=0.16,
-        hba1c_reduction_max=0.56,
+        hba1c_reduction_mean=0.32,   # Mean from authors' T1D-specific meta-analysis (19 studies, n=3567)
+        hba1c_reduction_std=0.072,   # SD to capture range 0.18-0.46%
+        hba1c_reduction_min=0.18,    # Lower bound from meta-analysis (manuscript result)
+        hba1c_reduction_max=0.46,    # Upper bound from meta-analysis (manuscript result)
         annual_cost_mean=150,        # Low marginal cost after development
         annual_cost_std=50,
         implementation_cost=5000,    # Platform development costs
@@ -166,24 +166,30 @@ ECONOMIC_PARAMS = {
     'alternative_wtp_thresholds': [0.5, 1.0, 2.0, 3.0],  # Multiple thresholds
 }
 
-# Health State Utilities (from Global Burden of Disease and diabetes-specific studies)
+# Health State Utilities (from GBD 2019, age-stratified; consistent with Table 2 in manuscript)
+# Age 5-17: no complications = 0.95 (0.92-0.98); age 18-64: no complications = 0.91 (0.88-0.94)
+# Model uses weighted mean for 5-25 year target population (approx. 0.93 combined)
 UTILITY_PARAMS = {
-    'diabetes_no_complications': 0.85,
-    'diabetes_microvascular_only': 0.75,
-    'diabetes_macrovascular_only': 0.70,
-    'diabetes_both_complications': 0.60,
-    'age_related_decline': 0.002,    # Annual utility decline per year of age
+    'diabetes_no_complications': 0.93,       # Weighted mean: 0.95 (age 5-17) + 0.91 (age 18-64), GBD 2019
+    'diabetes_no_complications_pediatric': 0.95,   # Age 5-17 (GBD 2019)
+    'diabetes_no_complications_adult': 0.91,       # Age 18-64 (GBD 2019)
+    'diabetes_microvascular_only': 0.80,     # Decrement ~0.13 from no-complications mean
+    'diabetes_macrovascular_only': 0.75,     # Decrement ~0.18 from no-complications mean
+    'diabetes_both_complications': 0.65,     # Decrement ~0.28 from no-complications mean
+    'age_related_decline': 0.002,            # Annual utility decline per year of age
 }
 
 # Complication Risk Parameters (adapted for resource-limited settings)
 COMPLICATION_PARAMS = {
     # Microvascular complications
+    # HbA1c coefficients from DCCT/EDIC (β = 0.37, 95% CI 0.31-0.43 per 1% HbA1c)
+    # consistent with manuscript Table 2 and appendix Table 4
     'retinopathy_base_risk': 0.02,   # Annual base risk
-    'retinopathy_hba1c_coefficient': 0.15,  # Risk increase per 1% HbA1c
+    'retinopathy_hba1c_coefficient': 0.37,  # β per 1% HbA1c (DCCT/EDIC; PMID 8366922)
     'nephropathy_base_risk': 0.015,
-    'nephropathy_hba1c_coefficient': 0.12,
+    'nephropathy_hba1c_coefficient': 0.37,  # β per 1% HbA1c (DCCT/EDIC; consistent with retinopathy)
     'neuropathy_base_risk': 0.025,
-    'neuropathy_hba1c_coefficient': 0.18,
+    'neuropathy_hba1c_coefficient': 0.37,   # β per 1% HbA1c (DCCT/EDIC; consistent)
     
     # Macrovascular complications
     'chd_base_risk': 0.008,          # Coronary heart disease

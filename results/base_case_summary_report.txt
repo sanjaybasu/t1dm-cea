@@ -1,0 +1,32 @@
+COST-EFFECTIVENESS ANALYSIS SUMMARY REPORT
+============================================================
+Analysis Date: 2026-04-23 10:09:07
+Model: Type 1 Diabetes Microsimulation
+Perspective: Health System (WHO CHOICE)
+Time Horizon: 10 years
+Discount Rate: 3.0%
+Currency: 2025 International Dollars
+
+KEY FINDINGS
+--------------------
+Most cost-effective intervention: mHealth
+  ICER: $1,788 per QALY
+  Incremental QALYs: 204.484
+  Incremental costs: $365,670
+
+Highest impact intervention: Public_Private
+  QALYs gained: 281.450
+  ICER: $60,624 per QALY
+
+Intervention Cluster Performance:
+  Integrated_Care: Not cost-effective
+    ICER: $60,023/QALY
+  Public_Private: Not cost-effective
+    ICER: $60,624/QALY
+  Technology_Enhanced: Not cost-effective
+    ICER: $158,360/QALY
+
+POLICY RECOMMENDATIONS
+-------------------------
+Recommended for immediate implementation:
+  • mHealth ($1,788/QALY)

@@ -51,7 +51,7 @@ This repository contains the complete microsimulation model and analysis code fo
 
 ## Model Specifications
 
-- **Population:** Type 1 diabetes patients aged 10-65 years in LMICs
+- **Population:** Type 1 diabetes patients aged 5-25 years at model entry in LMICs (manuscript target population)
 - **Time horizon:** 10 years with monthly cycles
 - **Perspective:** Health system (WHO CHOICE methodology)
 - **Discount rate:** 3% annually for costs and outcomes
