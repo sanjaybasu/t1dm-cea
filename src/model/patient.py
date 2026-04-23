@@ -5,8 +5,8 @@ This module defines the Patient class that represents individual patients
 in the microsimulation model with all relevant characteristics and methods
 for disease progression and intervention response.
 
-Author: Sanjay Basu, MD, PhD
-Institution: University of California San Francisco / Waymark Care
+Author: Sanjay Basu
+Institution: University of California San Francisco / Waymark
 """
 
 import numpy as np

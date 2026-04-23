@@ -5,8 +5,8 @@ This module provides utility functions for cost-effectiveness analysis
 including efficiency frontier calculation, dominance analysis, and
 cost-effectiveness metrics.
 
-Author: Sanjay Basu, MD, PhD
-Institution: University of California San Francisco / Waymark Care
+Author: Sanjay Basu
+Institution: University of California San Francisco / Waymark
 """
 
 import numpy as np

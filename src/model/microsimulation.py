@@ -4,8 +4,8 @@ Microsimulation Model for Type 1 Diabetes Cost-Effectiveness Analysis
 This module implements the main microsimulation model that simulates
 individual patients over time to evaluate intervention cost-effectiveness.
 
-Author: Sanjay Basu, MD, PhD
-Institution: University of California San Francisco / Waymark Care
+Author: Sanjay Basu
+Institution: University of California San Francisco / Waymark
 """
 
 import numpy as np

@@ -4,8 +4,8 @@ Visualization Functions for Cost-Effectiveness Analysis
 This module provides functions for creating publication-quality plots
 and visualizations for cost-effectiveness analysis results.
 
-Author: Sanjay Basu, MD, PhD
-Institution: University of California San Francisco / Waymark Care
+Author: Sanjay Basu
+Institution: University of California San Francisco / Waymark
 """
 
 import matplotlib.pyplot as plt

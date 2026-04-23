@@ -4,8 +4,8 @@ Base Case Analysis for Type 1 Diabetes Cost-Effectiveness Study
 This script runs the base case analysis for all interventions and clusters,
 generating the main cost-effectiveness results for the study.
 
-Author: Sanjay Basu, MD, PhD
-Institution: University of California San Francisco / Waymark Care
+Author: Sanjay Basu
+Institution: University of California San Francisco / Waymark
 """
 
 import sys

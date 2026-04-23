@@ -4,8 +4,8 @@ Sensitivity Analysis for Type 1 Diabetes Cost-Effectiveness Study
 This script performs comprehensive sensitivity analysis including
 one-way, probabilistic, and scenario analyses.
 
-Author: Sanjay Basu, MD, PhD
-Institution: University of California San Francisco / Waymark Care
+Author: Sanjay Basu
+Institution: University of California San Francisco / Waymark
 """
 
 import sys
